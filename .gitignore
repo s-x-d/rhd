@@ -1,0 +1,13 @@
+.venv/
+.idea/
+__pycache__/
+.env
+TODO.txt
+node_modules
+staticfiles/
+# Ignore database files
+*.sqlite3
+*.sql
+*.dump
+*.db
+*.pgdata

@@ -1,0 +1,22 @@
+{
+  "status": "done",
+  "assets": {
+    "app.css": {
+      "name": "app.css",
+      "path": "C:\\general\\www\\aws\\static\\bundles\\app.css",
+      "publicPath": "/static/bundles/app.css"
+    },
+    "app.js": {
+      "name": "app.js",
+      "path": "C:\\general\\www\\aws\\static\\bundles\\app.js",
+      "publicPath": "/static/bundles/app.js"
+    }
+  },
+  "chunks": {
+    "app": [
+      "app.css",
+      "app.js"
+    ]
+  },
+  "publicPath": "/static/bundles/"
+}

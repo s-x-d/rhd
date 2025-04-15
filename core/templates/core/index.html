@@ -1,0 +1,41 @@
+{% extends "core/base.html" %}
+
+{% block meta_desc %}Official website of Robin Howland, London based actor. Explore his work in acting, film.{% endblock %}
+{% block meta_keywords %}Robin Howland, Actor, London, Film, British Actor, Movies, Performances, Acting Career, Professional Actor, London Actor, TV, Rob Howland{% endblock %}
+{% block title %}Robin Howland | Actor based in London | Film & TV{% endblock %}
+
+{% block content %}
+
+
+<div class="container my-5">
+    <h1 class="mb-5">Movie List</h1>
+    {% if movies %}
+    <table class="table table-striped">
+        <thead class="table-borderless">
+            <tr>
+                <td style="background-color: #333333; color: #f2f2f2;">Title</td>
+                <td style="background-color: #333333; color: #f2f2f2;">Role</td>
+                <td style="background-color: #333333; color: #f2f2f2;">Director</td>
+                <td style="background-color: #333333; color: #f2f2f2;">Production</td>
+                <td style="background-color: #333333; color: #f2f2f2;">Image</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.role }}</td>
+                <td>{{ movie.director }}</td>
+                <td>{{ movie.production }}</td>
+                <td>{{ movie.image }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-center">No movies available.</p>
+    {% endif %}
+</div>
+
+
+{% endblock %}
