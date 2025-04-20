@@ -1,11 +1,7 @@
 from pathlib import Path
 import os
 
-BASE_DIR = Path(__file__).resolve().parent.parent # Build paths inside the project like this: BASE_DIR / 'subdir'.
-
-SECRET_KEY = 'django-insecure-b%4=6j-#r&&4hbj_is(aunv^q2cma-pu9(i=q8^!z)0ynd1%id'# SECURITY WARNING: keep the secret key used in production secret!
-
-DEBUG = True# SECURITY WARNING: don't run with debug turned on in production!
+BASE_DIR = Path(__file__).resolve().parent.parent.parent # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 ALLOWED_HOSTS = []
 
@@ -50,26 +46,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'aws.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.postgresql',
-		'NAME': 'rhd_db',
-		'USER': 'rh_user',
-		'PASSWORD': '123',
-		'HOST': 'localhost',  # Host (can remain as localhost for now)
-		'PORT': '5432',  # Default PostgreSQL port
-	}
-}
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -109,4 +85,3 @@ WEBPACK_LOADER = {
 		'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),  # Used by webpack-bundle-tracker
 	}
 }
-

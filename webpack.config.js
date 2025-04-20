@@ -1,3 +1,7 @@
+// Log the current environment
+console.log('Current NODE_ENV:', process.env.NODE_ENV);
+
+
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleTracker = require('webpack-bundle-tracker');

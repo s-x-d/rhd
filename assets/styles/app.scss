@@ -7,9 +7,13 @@
   $primary: #CC4646
 );
 
+// Note: Consider adding autoprefixer to the webpack config for better cross-browser compatibility
+// Example: npm install postcss-loader autoprefixer --save-dev
+// Then add to webpack.config.js in the sass-loader chain
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
 
-
+// Commented out colors - keeping for reference
 //$off-white: #f7f7f7;
 //$grey: #e4e4e4;
 //$grey-drk: #c7c7c7;
@@ -61,8 +65,7 @@ a {
   &:hover,
   &:focus {
     text-decoration: none; // Ensures no underline on hover or focus
-    //color: darken($red-orange, 10%); // Optional: Provide hover effect for color, modify as needed
-    //color: adjust-color($red-orange, $lightness: -10%);
+    // Using modern color.adjust() function from sass:color module
     color: color.adjust($red-orange, $lightness: -10%);
   }
 }
@@ -88,7 +91,6 @@ main {
 
 body {
   padding: 0;
-  margin: 0;
   padding-top: $nav-bar-height; // Ensure content starts below the navbar
   background-color: #f2f2f2; // #fefefe;
   color: $text-color;
@@ -97,6 +99,8 @@ body {
   font-weight: 400;
   //font-size: 0.9rem;
   text-rendering: optimizeLegibility;
+
+  // Vendor prefixes - consider using autoprefixer instead
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -106,13 +110,11 @@ body {
   border: none !important; // Removes the default border
   outline: none; // Optional: Removes the button's outline on focus
   box-shadow: none; // Removes any shadow effect
-}
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 0;
-}
-
-.navbar-toggler {
   border-color: $red-orange !important; // Change border color
+
+  &:focus {
+    box-shadow: 0 0 0 0;
+  }
 
   .navbar-toggler-icon {
     display: inline-block;
@@ -164,8 +166,7 @@ body {
   &:hover .navbar-toggler-icon::before,
   &:hover .navbar-toggler-icon::after,
   &:hover .navbar-toggler-icon span {
-    //background-color: darken($red-orange, 10%) !important; // Slightly darker color on hover
-    //background-color: adjust-color($red-orange, $lightness: -10%);
+    // Using modern color.adjust() function from sass:color module
     background-color: color.adjust($red-orange, $lightness: -10%);
   }
 }
@@ -207,7 +208,7 @@ body {
   }
 
   // Style for hamburger menu (collapsed menu)
-  @media (max-width: 991.98px) { // Targets smaller screens (Bootstrap breakpoint for lg and below)
+  @media (max-width: 991.98px) { // Bootstrap 5.3 breakpoint for lg and below
 
     .navbar-collapse {
       background-color: $bootstrap-dark !important; // Background for collapsed menu

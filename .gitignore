@@ -2,7 +2,6 @@
 .idea/
 __pycache__/
 .env
-TODO.txt
 node_modules
 staticfiles/
 # Ignore database files
@@ -11,3 +10,7 @@ staticfiles/
 *.dump
 *.db
 *.pgdata
+.junie/
+_notes.txt
+aws_deployment.md
+aws/settings/local.py
