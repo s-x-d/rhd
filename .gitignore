@@ -14,3 +14,8 @@ staticfiles/
 _notes.txt
 aws_deployment.md
 aws/settings/local.py
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
