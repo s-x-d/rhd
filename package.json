@@ -2,6 +2,7 @@
   "devDependencies": {
     "@aws-amplify/backend": "^1.14.3",
     "@aws-amplify/backend-cli": "^1.5.0",
+    "@aws-amplify/cli": "^13.0.1",
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "aws-cdk": "^2.1003.0",
@@ -22,7 +23,8 @@
     "typescript": "^5.8.3",
     "webpack-bundle-tracker": "^3.1.1",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.1"
+    "webpack-dev-server": "^5.2.1",
+    "webpack-merge": "^6.0.1"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -37,9 +39,9 @@
   "description": "aws",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV=development webpack --config webpack.config.js",
-    "start": "cross-env NODE_ENV=development webpack serve --config webpack.config.js --hot"
+    "start": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js --hot",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js"
   },
   "author": "",
   "license": "ISC"
