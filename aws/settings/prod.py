@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 # Security settings
-DEBUG = False
+DEBUG = True
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # Admin settings
@@ -14,6 +14,7 @@ ADMINS = [
 # Host settings
 ALLOWED_HOSTS = [
     'ec2-13-43-110-179.eu-west-2.compute.amazonaws.com',
+    'skynetcoder.com',
     '13.43.110.179',
     'localhost',
     '127.0.0.1',
