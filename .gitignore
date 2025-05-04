@@ -17,6 +17,8 @@ _notes.txt
 aws_deployment.md
 aws/settings/local.py
 
+rootkey.csv
+
 ec2_deploy.sh
 *.md
 

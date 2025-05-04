@@ -12,6 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 # Use production settings by default for AWS deployment
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'aws.settings.prod')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'aws.settings')
 
 application = get_wsgi_application()
