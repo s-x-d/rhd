@@ -2,6 +2,8 @@
 .idea/
 __pycache__/
 .env
+aws/.env
+old_settings/
 node_modules
 staticfiles/
 # Ignore database files
@@ -16,6 +18,7 @@ aws_deployment.md
 aws/settings/local.py
 
 ec2_deploy.sh
+*.md
 
 # EC2 deployment
 *.pem

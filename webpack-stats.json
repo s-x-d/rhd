@@ -10,6 +10,11 @@
       "name": "app.js",
       "path": "C:\\general\\www\\aws\\static\\bundles\\app.js",
       "publicPath": "/static/bundles/app.js"
+    },
+    "app.js.LICENSE.txt": {
+      "name": "app.js.LICENSE.txt",
+      "path": "C:\\general\\www\\aws\\static\\bundles\\app.js.LICENSE.txt",
+      "publicPath": "/static/bundles/app.js.LICENSE.txt"
     }
   },
   "chunks": {

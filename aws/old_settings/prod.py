@@ -1,6 +1,18 @@
 from .base import *
 import os
 
+# ADDED FROM LOCAL to get py manage.py runserver --settings=aws.settings.prod to work -----------------------------------------------------------------
+os.environ.setdefault('DB_NAME', 'rhd_db')
+os.environ.setdefault('DB_USER', 'rh_user')
+os.environ.setdefault('DB_PASSWORD', '123')
+os.environ.setdefault('DB_HOST', 'localhost')
+os.environ.setdefault('DB_PORT', '5432')
+
+os.environ.setdefault('DJANGO_SECRET_KEY', '++u08#fgezk9(tv)vyliz3b!tgh*s@p@p#hs$3v8i80)%e@&b4')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY') # Add this line to actually set the SECRET_KEY in Django settings
+#----------------------------------------------------------------------------------------------------------------------------
+
+
 # Security settings
 DEBUG = False  # Changed from True since this is production
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
