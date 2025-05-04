@@ -19,6 +19,12 @@ aws/settings/local.py
 
 rootkey.csv
 
+.ebextensions/
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+
 ec2_deploy.sh
 *.md
 
