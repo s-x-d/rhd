@@ -1,1 +1,1 @@
-web: gunicorn aws/wsgi.py
+web: gunicorn aws.wsgi

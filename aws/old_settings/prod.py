@@ -1,6 +1,9 @@
 from .base import *
 import os
 
+SET ENV VARS
+eb setenv DJANGO_SECRET_KEY='++u08fgezk9(tv)vyliz3b!tgh*s@p@phs$3v8i80)%e@&b4254721' DJANGO_SETTINGS_MODULE=aws.settings DB_NAME=rhd_db DB_USER=_db_master DB_PASSWORD=QZgU5CUZm2MQKENld02B DB_HOST=rh-db.c98es86wumdc.eu-west-2.rds.amazonaws.com DB_PORT=5432 DEBUG=False
+
 # ADDED FROM LOCAL to get py manage.py runserver --settings=aws.settings.prod to work -----------------------------------------------------------------
 os.environ.setdefault('DB_NAME', 'rhd_db')
 os.environ.setdefault('DB_USER', 'rh_user')
@@ -24,7 +27,7 @@ ADMINS = [
 
 # Host settings (keep as is)
 ALLOWED_HOSTS = [
-    'ec2-13-43-110-179.eu-west-2.compute.amazonaws.com',
+    'sc-app-env.eba-irvhxx4x.eu-west-2.elasticbeanstalk.com/',
     'skynetcoder.com',
     'www.skynetcoder.com',  # Added www subdomain
     '13.43.110.179',
